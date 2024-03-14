@@ -8,6 +8,7 @@ const app = Vue.createApp({
           image: './assets/img/avatar_2.jpg'
         }
       ],
+      selectedContact: '',
       contacts: [
         {
           name: 'Michele',
@@ -178,11 +179,26 @@ const app = Vue.createApp({
             }
           ],
         }
+      ],
+      activeContact: [
+        {
+          
+        }
       ]
+      
+    }
+  },
+  methods: {
+    setToActive(contact){
+      this.activeContact = { ...contact };
+      console.log(this.activeContact);
     }
   }
 })
 
 app.mount('#app')
 
+/* come fare ad impostare lo user attivo nella parte destra?
+
+array dove passiamo il current conctacts index come oggetto */
 
