@@ -116,6 +116,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  color:var(--notification)
 }
 
 #chat_nav {
@@ -169,6 +170,32 @@ body {
   height:calc(100% - 280px);
 }
 
+.contact{
+  position:relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    padding:1rem;
+    gap:1rem;
+    height:120px;
+    width:100%;
+    border:1px solid var(--main);
+    
+    h2{
+        font-weight: 300;
+        line-height: 2.5rem;
+    }
+    p{
+        color:var(--icons);
+        font-size: 1rem;
+    }
+    img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      object-fit: cover;
+    }
+}
 /* right section */
 #right_panel {
   height: 100%;
