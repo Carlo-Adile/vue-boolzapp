@@ -263,6 +263,27 @@ body {
   position:relative;
 }
 
+.dropdown{
+  z-index: 1000;
+  width:130px;
+  height: 40px;
+  position: absolute;
+  top: 105%;
+  left: 3%;
+  background-color: #f9f9f9;
+  min-width: 120px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding:0.75rem;
+  ul{
+    p{
+      font-size: 12px;
+      color:rgb(95, 49, 49);
+    }
+  }
+}
+
 .mine{
   position:relative;
     display: flex;
@@ -321,7 +342,7 @@ body {
 
   i {
     font-size: 1.5rem;
-    color: var(--secondary);
+    color: var(--icons);
   }
 }
 
@@ -335,6 +356,7 @@ body {
     padding:0.5rem;
   }
 }
+
 
 /* structure attributes */
 .container {
