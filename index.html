@@ -88,7 +88,11 @@
             </div>
             <!-- view messages here -->
             <div id="chat_panel">
-
+              <div v-for="message in activeContact.messages" :key="message.date"  :class="{'mine': message.status === 'sent', 'yours': message.status === 'received'}">
+                <p class="timestamp">{{ message.date }}</p>
+                <p>{{ message.message }}</p>
+                <p class="chevron">{{ message.status }}</p>
+              </div>
             </div>
             <div id="write_message">
               <i class="fa-regular fa-face-smile sm-hide"></i>

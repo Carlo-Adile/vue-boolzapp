@@ -38,7 +38,7 @@ Milestone 1:
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Milestone 2:
 - visualizzazione dinamica dei messaggi tramite v-for per visualizzare i messaggi di ogni singolo contatto, all'interno del pannello di conversazione
-- click sul contatto per mostrarne la conversazioneà
+- click sul contatto per mostrarne la conversazione
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 Milestone 3:
 - aggiunta messaggio: l'utente scrive un messaggio che viene aggiunto alla conversazione (thread)

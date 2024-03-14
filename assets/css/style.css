@@ -260,8 +260,51 @@ body {
   padding: 2rem;
   gap: 1rem;
   background-image: url("../img/background.jpg");
+  position:relative;
 }
 
+.mine{
+  position:relative;
+    display: flex;
+    align-self: flex-end;
+    width:60%;
+    min-width: 275px;
+    border-radius: 1rem;
+    background-color: var(--my_msg);
+    padding:1rem 3rem 1rem 1rem;
+
+    p{
+        line-height:1.2rem;
+    }
+}
+
+.yours{
+  position:relative;
+    display: flex;
+    align-self: flex-start;
+    width:60%;
+    min-width: 275px;
+    border-radius: 1rem;
+    background-color: white;
+    padding:1rem 3rem 1rem 1rem;
+}
+
+.timestamp{
+  position:absolute;
+    bottom: 4%;
+    right:2%;
+    color:var(--icons);
+    font-size:0.7rem;
+}
+
+.chevron{
+  position:absolute;
+    top: 1rem;
+    right:2%;
+    color:var(--icons);
+}
+
+/* write a message */
 #write_message {
   display: flex;
   flex-wrap: wrap;
