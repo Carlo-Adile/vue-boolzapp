@@ -8,7 +8,6 @@ const app = Vue.createApp({
           image: './assets/img/avatar_2.jpg'
         }
       ],
-      selectedContact: '',
       contacts: [
         {
           name: 'Michele',
@@ -180,6 +179,7 @@ const app = Vue.createApp({
           ],
         }
       ],
+      /* activeContact: false, */
       activeContact: [
         {
           

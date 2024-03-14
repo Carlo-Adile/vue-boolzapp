@@ -65,26 +65,37 @@
               </div>
             </div>
           </div>
-          <!-- messages -->
+          <!-- current contact / chat panel / write a message -->
           <div id="right_panel" class="col-9">
             <div id="current_contact">
-              <div id="current_info" class="debug">
-                <img :src="activeContact.avatar" alt="">
+              <div id="current_info" class="debug" v-if="activeContact">
+                <img :src="activeContact.avatar" alt="immagine del contatto attivo">
                 <span>{{ activeContact.name }}</span>
               </div>
               <div id="current_btn">
                 <ul>
                   <li><a href="">
                       <i class="fa-solid fa-magnifying-glass"></i>
-                  </a></li>
+                    </a></li>
                   <li><a href="">
                       <i class="fa-solid fa-paperclip"></i>
-                  </a></li>
+                    </a></li>
                   <li><a href="">
                       <i class="fa-solid fa-ellipsis-vertical"></i>
-                  </a></li>
-              </ul>
+                    </a></li>
+                </ul>
               </div>
+            </div>
+            <!-- view messages here -->
+            <div id="chat_panel">
+
+            </div>
+            <div id="write_message">
+              <i class="fa-regular fa-face-smile sm-hide"></i>
+              <div id="write_input">
+                <input type="text" name="" id="write_input" placeholder="Scrivi un messaggio">
+              </div>
+              <i class="fa-solid fa-microphone sm-hide"></i>
             </div>
           </div>
         </div>
