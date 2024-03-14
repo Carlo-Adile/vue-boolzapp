@@ -119,7 +119,7 @@ const app = Vue.createApp({
           avatar: './assets/img/avatar_6.jpg',
           visible: true,
           bio: "Cinefilo incallito, appassionato di viaggi",
-          
+
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -143,7 +143,7 @@ const app = Vue.createApp({
           avatar: './assets/img/avatar_7.jpg',
           visible: true,
           bio: "Amante della musica, aspirante chef",
-          
+
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -162,7 +162,7 @@ const app = Vue.createApp({
           avatar: './assets/img/avatar_8.jpg',
           visible: true,
           bio: "Artista in erba, sognatore romantico",
-          
+
           messages: [
             {
               date: '10/01/2020 15:30:55',
@@ -185,26 +185,32 @@ const app = Vue.createApp({
       newMessage: '',
       activeContact: [
         {
-          
+
         }
       ],
     }
   },
   methods: {
-    setToActive(contact){
+    setToActive(contact) {
       this.activeContact = { ...contact };
       console.log(this.activeContact);
     },
-    toggleDropdown(message){
+    toggleDropdown(message) {
       message.showDropdown = !message.showDropdown;
     },
-    sendMessage(){
+    sendMessage() {
       this.activeContact.messages.push({
         date: new Date().toLocaleString(),
         message: this.newMessage,
         status: 'sent'
       });
       this.newMessage = '';
+    },
+    deleteMessage(message) {
+      const index = this.activeContact.messages.indexOf(message);
+      if (index !== -1) {
+        this.activeContact.messages.splice(index, 1);
+      }
     }
   }
 })

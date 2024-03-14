@@ -91,7 +91,7 @@
               <div v-for="message in activeContact.messages" :key="message.date"  :class="{'mine': message.status === 'sent', 'yours': message.status === 'received'}" @click="toggleDropdown(message)">
                 <div v-if="message.showDropdown" class="dropdown">
                   <ul>
-                    <li><p>elimina messaggio</p></li>
+                    <li><p @click="deleteMessage(message)">elimina messaggio</p></li>
                   </ul>
                 </div>
                 <p class="timestamp">{{ message.date }}</p>
