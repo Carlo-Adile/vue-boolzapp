@@ -206,6 +206,17 @@ const app = Vue.createApp({
       });
       this.newMessage = '';
     },
+    userReply(){
+      this.activeContact.isTyping = !this.activeContact.isTyping;
+      setTimeout(() => {
+        this.activeContact.messages.push({
+          date: new Date().toLocaleString(),
+          message: "ok",
+          status: 'received'
+        });
+        this.activeContact.isTyping = !this.activeContact.isTyping;
+      }, 1500);
+    },
     deleteMessage(message) {
       const index = this.activeContact.messages.indexOf(message);
       if (index !== -1) {

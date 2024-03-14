@@ -70,7 +70,12 @@
             <div id="current_contact">
               <div id="current_info" class="debug" v-if="activeContact">
                 <img :src="activeContact.avatar" alt="immagine del contatto attivo">
-                <span>{{ activeContact.name }}</span>
+                <div>
+                  <p>{{ activeContact.name }}</p>
+                  <p v-if="activeContact.isTyping">Sta scrivendo...</p>
+                  <p v-else=>Online</p>
+                </div>
+
               </div>
               <div id="current_btn">
                 <ul>
@@ -88,10 +93,14 @@
             </div>
             <!-- view messages here -->
             <div id="chat_panel">
-              <div v-for="message in activeContact.messages" :key="message.date"  :class="{'mine': message.status === 'sent', 'yours': message.status === 'received'}" @click="toggleDropdown(message)">
+              <div v-for="message in activeContact.messages" :key="message.date"
+                :class="{'mine': message.status === 'sent', 'yours': message.status === 'received'}"
+                @click="toggleDropdown(message)">
                 <div v-if="message.showDropdown" class="dropdown">
                   <ul>
-                    <li><p @click="deleteMessage(message)">elimina messaggio</p></li>
+                    <li>
+                      <p @click="deleteMessage(message)">elimina messaggio</p>
+                    </li>
                   </ul>
                 </div>
                 <p class="timestamp">{{ message.date }}</p>
@@ -102,7 +111,8 @@
             <div id="write_message">
               <i class="fa-regular fa-face-smile sm-hide"></i>
               <div id="write_input">
-                <input type="text" name="" id="write_input" placeholder="Scrivi un messaggio" v-model="newMessage" @keyup.enter="sendMessage()">
+                <input type="text" name="" id="write_input" placeholder="Scrivi un messaggio" v-model="newMessage"
+                  @keyup.enter="sendMessage(), userReply()">
               </div>
               <i class="fa-solid fa-microphone sm-hide"></i>
             </div>

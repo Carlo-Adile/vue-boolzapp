@@ -70,6 +70,7 @@ body {
   height: 100px;
   padding: 1rem;
   background-color: var(--main);
+  border-right:1px lightgray solid;
 }
 
 #my_info {
@@ -208,6 +209,7 @@ body {
 
 #current_contact {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   padding: 1rem 2rem 1rem 1rem;
@@ -220,10 +222,6 @@ body {
     font-weight: 300;
     line-height: 2.5rem;
   }
-
-  p {
-    color: var(--secondary);
-  }
 }
 
 #current_info {
@@ -231,12 +229,19 @@ body {
   align-items: center;
   gap: 1rem;
   font-size: 20px;
+  line-height: 1.5rem;
 
   img {
     width: 70px;
     height: 70px;
     border-radius: 50%;
     object-fit: cover;
+  }
+
+  p:nth-child(2) {
+    color: darkgrey;
+    font-size: 16px;
+    font-style: italic;
   }
 }
 
