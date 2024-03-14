@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,13 +10,42 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <title>Vue Boolzap</title>
 </head>
+
 <body>
+
   <div id="app">
-    
-
-
+    <!-- <div class="colored_section"></div> -->
+    <div id="whatsapp">
+      <div class="container">
+        <!-- wrapper -->
+        <div class="row">
+          <!-- contacts -->
+          <div id="left_panel" class="col-3">
+            <!-- my personal info -->
+            <div id="account" class="debug">
+              <div id="my_info" class="debug">
+                <img :src="myAccount[0].image" alt="la mia immagine">
+                <span>{{myAccount[0].name}}</span>
+              </div>
+              <div>
+                <ul>
+                  <li><i class="fa-solid fa-circle-notch"></i></li>
+                  <li><i class="fa-solid fa-message"></i></li>
+                  <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <!-- messages -->
+          <div id="right_panel" class="col-9">
+            ciao
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="./assets/js/main.js"></script>
 </body>
+
 </html>
