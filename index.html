@@ -19,9 +19,9 @@
       <div class="container">
         <!-- wrapper -->
         <div class="row">
-          <!-- contacts -->
+          <!-- my info / notification / contacts -->
           <div id="left_panel" class="col-3">
-            <!-- my personal info -->
+            <!-- my info -->
             <div id="account" class="debug">
               <div id="my_info" class="debug">
                 <img :src="myAccount[0].image" alt="la mia immagine">
@@ -34,6 +34,30 @@
                   <li><i class="fa-solid fa-ellipsis-vertical"></i></li>
                 </ul>
               </div>
+            </div>
+            <!-- notification -->
+            <div id="notification">
+              <div id="turn_on">
+                <div id="turn_on_icon">
+                  <i class="fa-solid fa-bell-slash"></i>
+                </div>
+                <div>
+                  <p>Ricevi notifiche di nuovi messaggi</p>
+                  <span>Attiva notifiche desktop</span>
+                </div>
+              </div>
+            </div>
+            <!-- search bar -->
+            <div id="chat_nav">
+              <form action="" id="input_container">
+                <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
+
+                <input type="text" placeholder="Cerca o inizia una nuova chat">
+              </form>
+            </div>
+            <!-- contact list -->
+            <div id="contact_list">
+              
             </div>
           </div>
           <!-- messages -->
