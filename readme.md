@@ -43,6 +43,12 @@ Milestone 2:
 Milestone 3:
 - aggiunta messaggio: l'utente scrive un messaggio che viene aggiunto alla conversazione (thread)
 - messaggio di risposta: quando l'utente manda un messaggio, riceve come risposta un "ok" da parte dell'altro utente, dopo 1 secondo di tempo.
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Milestone 4:
+Ricerca utenti: motore di ricerca con anteprima, se l'utente digita alcune lettere, il motore suggerisce il target finale
+- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+Milestone 5 (opzionale):
+Cancella messaggio tramite menu a tendina
 
 
 
