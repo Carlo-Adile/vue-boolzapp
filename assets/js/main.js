@@ -1,6 +1,10 @@
 const app = Vue.createApp({
   data() {
     return {
+      imSearching: '',
+      searchUser: '',
+      newMessage: '',
+      activeContact: null,
       myAccount: [
         {
           name: "Carlo",
@@ -158,7 +162,7 @@ const app = Vue.createApp({
           ],
         },
         {
-          name: 'Davide',
+          name: 'Andrea',
           avatar: './assets/img/avatar_8.jpg',
           visible: true,
           bio: "Artista in erba, sognatore romantico",
@@ -182,7 +186,6 @@ const app = Vue.createApp({
           ],
         }
       ],
-      newMessage: '',
       activeContact: [
         {
 
@@ -190,6 +193,7 @@ const app = Vue.createApp({
       ],
     }
   },
+  /* my methods */
   methods: {
     setToActive(contact) {
       this.activeContact = { ...contact };
@@ -206,12 +210,12 @@ const app = Vue.createApp({
       });
       this.newMessage = '';
     },
-    userReply(){
+    userReply() {
       this.activeContact.isTyping = !this.activeContact.isTyping;
       setTimeout(() => {
         this.activeContact.messages.push({
           date: new Date().toLocaleString(),
-          message: "ok",
+          message: "Vai zio",
           status: 'received'
         });
         this.activeContact.isTyping = !this.activeContact.isTyping;
@@ -222,8 +226,17 @@ const app = Vue.createApp({
       if (index !== -1) {
         this.activeContact.messages.splice(index, 1);
       }
+    },
+  },
+  computed: {
+    filteredContacts() {
+      return this.contacts.filter(contact => {
+        return contact.name.toLowerCase().includes(this.searchUser.toLowerCase());
+      })
     }
   }
 })
 
-app.mount('#app')
+app.mount('#app');
+
+

@@ -51,12 +51,12 @@
             <div id="chat_nav">
               <form action="" id="input_container">
                 <a href=""><i class="fa-solid fa-magnifying-glass"></i></a>
-                <input type="text" placeholder="Cerca o inizia una nuova chat">
+                <input type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchUser">
               </form>
             </div>
             <!-- contact list -->
             <div id="contact_list">
-              <div class="contact" v-for="contact in contacts" @click="setToActive({...contact})">
+              <div class="contact" v-for="contact in filteredContacts" @click="setToActive({...contact})">
                 <img :src="contact.avatar" alt="contact image">
                 <div>
                   <h2>{{contact.name}}</h2>
@@ -75,7 +75,6 @@
                   <p v-if="activeContact.isTyping">Sta scrivendo...</p>
                   <p v-else=>Online</p>
                 </div>
-
               </div>
               <div id="current_btn">
                 <ul>
@@ -121,6 +120,8 @@
       </div>
     </div>
   </div>
+  <!-- luxon -->
+  <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
   <script src="https://unpkg.com/vue@3"></script>
   <script src="./assets/js/main.js"></script>
 </body>
