@@ -215,7 +215,7 @@ const app = Vue.createApp({
       setTimeout(() => {
         this.activeContact.messages.push({
           date: new Date().toLocaleString(),
-          message: "Vai zio",
+          message: "Ok",
           status: 'received'
         });
         this.activeContact.isTyping = !this.activeContact.isTyping;
